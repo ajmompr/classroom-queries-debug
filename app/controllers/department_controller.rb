@@ -10,6 +10,10 @@ class DepartmentController < ApplicationController
     @department_table = Department.where({:id => the_id })
     @department = @department_table.at(0)
 
+    @course_table = Course.where({ :department_id => @department})
+
+    
+
     render({ :template => "departments/show" })
   end
 
