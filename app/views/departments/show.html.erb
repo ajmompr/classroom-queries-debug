@@ -56,7 +56,9 @@
 <ul>
   <% @course_table.each do |a_course|%>
   <li>
+    <a href="/courses/<%= a_course.id %>">
     <%= a_course.title %> 
+    </a>
   </li>
   <% end %>
 </ul>
